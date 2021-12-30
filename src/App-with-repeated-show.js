@@ -7,7 +7,7 @@ import Translate from './components/Translate';
 
 
 
-/* So firstly this code is verbose with alot of repaeats */
+/* So firstly this code is verbose with a lot of repeats */
 const items = [
   {
     title: 'What is react?',
