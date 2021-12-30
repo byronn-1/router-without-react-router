@@ -4,6 +4,10 @@ import Search from './components/search';
 import Dropdown from './components/Dropdown';
 import Translate from './components/Translate';
 
+
+
+
+/* So firstly this code is verbose with alot of repaeats */
 const items = [
   {
     title: 'What is react?',

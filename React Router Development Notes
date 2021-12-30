@@ -11,3 +11,5 @@ Due to react router implemententing breaking changes at least once a year Stephe
       : null;
     };
  but says how this isn't really an approach you should tke in react ( why not just create a component to do all the heavy lifting)
+
+ 4. make a route component.
