@@ -35,3 +35,4 @@ Due to react router implemententing breaking changes at least once a year Stephe
 
 7. Now we have to make sure that any time the onlocationchange function is called we have to tell the route component to rerender itself.
 
+8. add the ability to cmd click to open a new page.

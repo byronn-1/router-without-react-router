@@ -2,6 +2,11 @@ import React from "react";
 
 const Link = ({ className, href, children }) => {
   const onClick = (event) => {
+    const onClick = (event) => {
+      if (event.metakey || event.ctrlKey) {
+        return;
+      }
+    }
     //prevent a full page reload
     event.preventDefault();
 
