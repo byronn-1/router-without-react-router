@@ -16,3 +16,10 @@ Due to react router implemententing breaking changes at least once a year Stephe
     it takes two props path (the path of the url)
     and children this when you nest one JSX tag in another it becomes a child of the parent (this is done in App.js)
 
+5.  Stephen highlights how HTML is wired that when you click   on a url changing link that the page will hard reload. Obviously this is no good for what we want.  
+  user clicks on link => change URL but don't do full page refresh => each route could detect the URL has changed => Route could update piece of state tracking the current pathname => each route rerenders, showing/hiding components appropriately
+
+6. header => link => Navigation event object
+    the nav event obj will emit an onclick event ot each route in the app. when they receive the nav event they will decide whether to show their child components.
+
+
