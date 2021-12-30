@@ -1,1 +1,13 @@
 Due to react router implemententing breaking changes at least once a year Stephen Grider shows us that it is possible to create a faux react router out of components, useEffect hook and DOM window methods.
+
+1. Stephen shows that window.location in the browser console will reveal a an object that has a property of pathname on it.the value for path name is accurate to the search bar in the browser.
+
+2. see '/App-with-repeated-show.js' for details
+
+3. Stephen then shows a repeated function;-
+    const showComponent = (route, component) => {
+      return window.location.pathname === route
+      ? component
+      : null;
+    };
+ but says how this isn't really an approach you should tke in react ( why not just create a component to do all the heavy lifting)
