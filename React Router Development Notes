@@ -12,4 +12,7 @@ Due to react router implemententing breaking changes at least once a year Stephe
     };
  but says how this isn't really an approach you should tke in react ( why not just create a component to do all the heavy lifting)
 
- 4. make a route component.
+ 4. here we make a route component.
+    it takes two props path (the path of the url)
+    and children this when you nest one JSX tag in another it becomes a child of the parent (this is done in App.js)
+

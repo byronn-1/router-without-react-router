@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-// import Accordion from './components/accordion';
-// import Search from './components/search';
+import Accordion from './components/accordion';
+import Search from './components/search';
 import Dropdown from './components/Dropdown';
 import Translate from './components/Translate';
+import Route from './components/Route';
 
 const items = [
   {
@@ -40,16 +41,24 @@ export default () => {
 
   return (
     <div>
-      <Dropdown
-        selected={selected}
-        onSelectedChange={setSelected}
-        options={options} />
-      <Translate />
+      <Route path="/">
+        <Accordion items={items} />
+      </Route>
+      <Route path="/list">
+        <Search />
+      </Route>
+      <Route path="/translate">
+        <Translate />
+      </Route>
+      <Route path="/dropdown">
+        <Dropdown
+          label="select a colour"
+          options={options}
+          selected={selected}
+          onSelectedChange={setSelected}
+        />
+      </Route>
     </div >
   );
 };
 
-/*   <Accordion items={items} />
-     <Search /> 
-
-*/
