@@ -22,4 +22,16 @@ Due to react router implemententing breaking changes at least once a year Stephe
 6. header => link => Navigation event object
     the nav event obj will emit an onclick event ot each route in the app. when they receive the nav event they will decide whether to show their child components.
 
+    //prevent a full page reload
+    event.preventDefault();
+
+    //change the URL without reloading entire page
+    window.history.pushState({}, '', href)
+
+    next send that event to all the routes to tell them that the link has just changed
+
+    const navEvent = new popStateEvent('popstate');
+    window.dispatchEvent(navEvent);
+
+7. Now we have to make sure that any time the onlocationchange function is called we have to tell the route component to rerender itself.
 

@@ -1,6 +1,19 @@
-import React from 'react'; //theres no jsx here so we don't actually need this import
+import { useEffect } from 'react';
+
 
 const Route = ({ path, children }) => {
+  useEffect(() => {
+    const onLocationChange = () => {
+      console.log('Location Change')
+    }
+
+    window.addEventListener('popstate', onLocationChange);
+
+    return () => {
+      window.removeEventListener('popstate', onLocationChange)
+    }
+  }, []);
+
   return window.location.pathname === path
     ? children
     : null;
