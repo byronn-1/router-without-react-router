@@ -1,0 +1,1 @@
+Due to react router implemententing breaking changes at least once a year Stephen Grider shows us that it is possible to create a faux react router out of components, useEffect hook and DOM window methods.
